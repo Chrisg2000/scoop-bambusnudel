@@ -1,20 +1,20 @@
 {
-    "version": "v4.0.0-beta.15",
+    "version": "v4.0.0-beta.16",
     "description": "Virtual Desktop Tools for Windows 11 and 10.",
     "homepage": "https://github.com/hwtnb/SylphyHornPlusWin11",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hwtnb/SylphyHornPlusWin11/releases/download/v4.0.0-beta.15/SylphyHornPlus-v4.0.0-beta.15-x64.zip",
-            "hash": "sha256:bdbf2d3cb5673788b4555a99d3736698ed4589fe184dbf729a7170598288b087"
+            "url": "https://github.com/hwtnb/SylphyHornPlusWin11/releases/download/v4.0.0-beta.16/SylphyHornPlus-v4.0.0-beta.16-x64.zip",
+            "hash": "31681525bf5482d7aa29bd2f41af8b41e32b76eda6785adcab96ea38d43eb71f"
         },
         "32bit": {
-            "url": "https://github.com/hwtnb/SylphyHornPlusWin11/releases/download/v4.0.0-beta.15/SylphyHornPlus-v4.0.0-beta.15-x86.zip",
-            "hash": "sha256:f44316b9908441809433fbb6bf5403eedd6d7e4a52a21b000da2e1721089c9df"
+            "url": "https://github.com/hwtnb/SylphyHornPlusWin11/releases/download/v4.0.0-beta.16/SylphyHornPlus-v4.0.0-beta.16-x86.zip",
+            "hash": "fabded7aa874f66ed5e4156b1bb80f24892df688fa5e8626291f045e93167d88"
         },
         "arm64": {
-            "url": "https://github.com/hwtnb/SylphyHornPlusWin11/releases/download/v4.0.0-beta.15/SylphyHornPlus-v4.0.0-beta.15-arm64.zip",
-            "hash": "sha256:ce14ddbc8a81f81c2e83e13117d3e16122f2468c85b7e754e63c27c2a07ffa01"
+            "url": "https://github.com/hwtnb/SylphyHornPlusWin11/releases/download/v4.0.0-beta.16/SylphyHornPlus-v4.0.0-beta.16-arm64.zip",
+            "hash": "04af68230141c104745934e0b4d7fa225ad3adf36b6b70a3aff324648c6e0e4b"
         }
     },
     "bin": "SylphyHorn.exe",
