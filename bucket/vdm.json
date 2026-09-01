@@ -16,10 +16,11 @@
     ],
     "post_install": [
         "$dirpath = $dir.Replace('\\', '\\\\')",
+        "$pythonpath = $(appdir python).Replace('\\', '\\\\')",
         "'add-startup.reg', 'remove-startup.reg' | ForEach-Object {",
         "    $content = Get-Content \"$bucketsdir\\bambusnudel\\scripts\\$app\\$_\"",
         "    $content = $content.Replace('$dir', $dirpath)",
-        "    $content = $content.Replace('$python_dir', $(appdir python))",
+        "    $content = $content.Replace('$python_dir', $pythonpath))",
         "    if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
         "    $content | Set-Content -Path \"$dir\\$_\"",
         "}"
