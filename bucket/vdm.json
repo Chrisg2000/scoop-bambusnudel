@@ -1,0 +1,28 @@
+{
+    "version": "4.0.0",
+    "description": "Move windows across virtual desktops using a keyboard shortcut",
+    "homepage": "https://github.com/Chrisg2000/VirtualDesktopManager",
+    "license": "Freeware",
+    "depends": "python",
+    "url": "https://github.com/Chrisg2000/VirtualDesktopManager/releases/download/v4.0.0/vdm.pyzw",
+    "hash": "sha256:b01c3e7802655e9cac740916f99bd240ec4ef5847a4e26b4887dbd521927de0b",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Chrisg2000/VirtualDesktopManager/releases/download/$version/vdm.pyzw"
+    },
+    "notes": [
+        "Add VDM to startup by running:",
+        "reg import \"$dir\\add-startup.reg\""
+    ],
+    "post_install": [
+        "$dirpath = $dir.Replace('\\', '\\\\')",
+        "'add-startup.reg', 'remove-startup.reg' | ForEach-Object {",
+        "    $content = Get-Content \"$bucketsdir\\bambusnudel\\scripts\\$app\\$_\"",
+        "    $content = $content.Replace('$dir', $dirpath)",
+        "    $content = $content.Replace('$python_dir', $(appdir python))",
+        "    if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
+        "    $content | Set-Content -Path \"$dir\\$_\"",
+        "}"
+    ],
+    "pre_uninstall": "if ($cmd -eq 'uninstall') { reg import \"$dir\\remove-startup.reg\" }"
+}
